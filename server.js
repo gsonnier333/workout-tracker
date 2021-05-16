@@ -36,9 +36,11 @@ app.post("/api/workouts", (req, res) => {
 	db.Workout.create({})
 		.then((newWorkout) => {
 			console.log(newWorkout);
+			res.json(newWorkout);
 		})
 		.catch((err) => {
 			console.log(err);
+			res.json(err);
 		});
 });
 
