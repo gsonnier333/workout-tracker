@@ -52,11 +52,9 @@ app.get("/api/workouts", (req, res) => {
 app.post("/api/workouts", (req, res) => {
 	db.Workout.create({})
 		.then((newWorkout) => {
-			console.log(newWorkout);
 			res.json(newWorkout);
 		})
 		.catch((err) => {
-			console.log(err);
 			res.json(err);
 		});
 });
@@ -95,7 +93,7 @@ app.get("/api/workouts/range", (req, res) => {
 	])
 		.then((data) => {
 			let lastSeven = data.slice(data.length - 7); //grab a slice of the array that only includes the last seven workouts
-
+			//console.log(lastSeven);
 			res.json(lastSeven);
 		})
 		.catch((err) => {
