@@ -1,6 +1,5 @@
-//export an object with both of our models
+//export an object with our model
 
 module.exports = {
-	Exercise: require("./Exercise"),
 	Workout: require("./Workout"),
 };
