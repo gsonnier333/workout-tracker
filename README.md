@@ -1,61 +1,16 @@
 # Unit 17 NoSQL Homework: Workout Tracker
 
-For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+## Screenshots
 
-## User Story
+![Front page](./screenshots/front-page.PNG)
+![Dashboard with stats](./screenshots/stats-page.PNG)
 
-* As a user, I want to be able to view create and track daily workouts. I want to be able to log multiple exercises in a workout on a given day. I should also be able to track the name, type, weight, sets, reps, and duration of exercise. If the exercise is a cardio exercise, I should be able to track my distance traveled.
+## Deployed link
 
-## Business Context
+https://workout-tracker-gfs.herokuapp.com/
 
-A consumer will reach their fitness goals more quickly when they track their workout progress.
+## Description
 
-## Acceptance Criteria
+For this assignment, I was given the front end code for a workout tracking application and instructed to build the backend using a MongoDB database and Mongoose. On the front page, you can see the last workout saved (if there are any) and you can either continue that workout by adding exercises to it or start a new workout. If you do either, you'll be given a form in which you can fill in the details of your next exercise, and those details will be saved to the database. On the dashboard is the stats page, which can give you a visual representation of the last seven workouts you submitted, including the total duration and pounds lifted of each workout.
 
-When the user loads the page, they should be given the option to create a new workout or continue with their last workout.
-
-The user should be able to:
-
-  * Add exercises to the most recent workout plan.
-
-  * Add new exercises to a new workout plan.
-
-  * View the combined weight of multiple exercises from the past seven workouts on the `stats` page.
-
-  * View the total duration of each workout from the past seven workouts on the `stats` page.
-
-> **Important:** Look into using a MongoDB aggregate function to dynamically add up and return the total duration for each workout. Check out the [MongoDB documentation on the $addFields](https://docs.mongodb.com/manual/reference/operator/aggregation/addFields/), the [MongoDB documentation on the $sum operator](https://docs.mongodb.com/manual/reference/operator/aggregation/sum/), and the [Mongoose documentation on aggregate functions](https://mongoosejs.com/docs/api.html#aggregate_Aggregate) to learn how it can be accomplished.
-
-To deploy an application with a MongoDB database to Heroku, you'll need to set up a MongoDB Atlas account and connect a database from there to your application. Be sure to use the following guides for support:
-
-  * [Set Up MongoDB Atlas](../04-Important/MongoAtlas-Setup.md)
-
-  * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
-
-## Commit Early and Often
-
-One of the most important skills to master as a web developer is version control. Building the habit of committing via Git is important for the following two reasons:
-
-1. Your commit history is a signal to employers that you are actively working on projects and learning new skills.
-
-2. Your commit history allows you to revert your codebase in the event that you need to return to a previous state.
-
-Follow these guidelines for committing:
-
-* Make single-purpose commits for related changes to ensure a clean, manageable history. If you are fixing two issues, make two commits.
-
-* Write descriptive, meaningful commit messages so that you and anyone else looking at your repository can easily understand its history.
-
-* Don't commit half-done work, for the sake of your collaborators (and your future self!).
-
-* Test your application before you commit to ensure functionality at every step in the development process.
-
-We want you to have well over 200 commits by graduation, so commit early and often!
-
-## Submission on BCS
-
-You are required to submit the following:
-
-* The URL to the deployed application
-
-* The URL to the GitHub repository
+In doing this homework assignment, I learned a lot about using MongoDB for a website's back end. I also ran into a handful of issues in the front end code that was provided to me that I took the liberty to fix before deploying. It ended up being slightly more challening than I expected, but I learned a lot and feel it was a very valuable experience. I'm much more comfortable now with using MongoDB and Mongoose than I was before starting on this assignment.
