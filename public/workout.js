@@ -1,5 +1,4 @@
 async function initWorkout() {
-	console.log("initializing workout");
 	const lastWorkout = await API.getLastWorkout();
 	console.log("Last workout:", lastWorkout);
 	if (lastWorkout) {
@@ -46,7 +45,6 @@ function formatDate(date) {
 }
 
 function renderWorkoutSummary(summary) {
-	console.log("rendering summary");
 	const container = document.querySelector(".workout-stats");
 
 	const workoutKeyMap = {

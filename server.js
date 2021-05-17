@@ -39,14 +39,6 @@ app.get("/api/workouts", (req, res) => {
 		.catch((err) => {
 			res.json(err);
 		});
-
-	// db.Workout.find({})
-	// 	.then((data) => {
-	// 		res.json(data);
-	// 	})
-	// 	.catch((err) => {
-	// 		res.json(err);
-	// 	});
 });
 
 app.post("/api/workouts", (req, res) => {
@@ -71,10 +63,8 @@ app.put("/api/workouts/:id", (req, res) => {
 		},
 		(err, doc) => {
 			if (err) {
-				console.log(err);
 				res.json(err);
 			} else {
-				console.log(doc);
 				res.json(doc);
 			}
 		}
@@ -93,21 +83,11 @@ app.get("/api/workouts/range", (req, res) => {
 	])
 		.then((data) => {
 			let lastSeven = data.slice(data.length - 7); //grab a slice of the array that only includes the last seven workouts
-			//console.log(lastSeven);
 			res.json(lastSeven);
 		})
 		.catch((err) => {
 			res.json(err);
 		});
-	// db.Workout.find({})
-	// 	.then((data) => {
-	// 		let lastSeven = data.slice(data.length - 7); //grab a slice of the array that only includes the last seven workouts
-	// 		console.log(lastSeven[0]);
-	// 		res.json(lastSeven);
-	// 	})
-	// 	.catch((err) => {
-	// 		res.json(err);
-	// 	});
 });
 
 app.get("/exercise", (req, res) => {

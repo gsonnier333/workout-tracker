@@ -22,7 +22,6 @@ function generatePalette() {
 }
 
 function populateChart(data) {
-	console.log("Populating chart");
 	let durations = data.map(({ totalDuration }) => totalDuration);
 	let workouts = workoutNames(data);
 	let pounds = calculateTotalWeight(data);
@@ -197,20 +196,16 @@ function calculateTotalWeight(data) {
 
 function workoutNames(data) {
 	let workouts = [];
-	console.log("Workout names called");
 	data.forEach((workout) => {
 		workout.exercises.forEach((exercise) => {
-			console.log(exercise.name);
 			if (exercise.name != "undefined") {
 				workouts.push(exercise.name);
 			}
 		});
 	});
 
-	// return de-duplicated array with JavaScript `Set` object
-	return [...new Set(workouts)];
+	return workouts;
 }
 
 // get all workout data from back-end
 API.getWorkoutsInRange().then(populateChart);
-console.log("stats.js loaded");
